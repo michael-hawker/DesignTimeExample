@@ -1,13 +1,12 @@
 ﻿namespace DesignTimeExample.ViewModels
 {
 	/// <summary>
-	/// Reference object for Json design time data source is quite sensitive:
-	/// target properties must have public getter and setter and property names must match those in json file.
+	/// Json files are deserialized into design time data source using internal data serializer,
+	/// that is quite sensitive to reference object type.
 	/// </summary>
 	public class JsonViewModel
 	{
-		public string Data { get; set; }
-
-		public string Color { get; set; }
+		public string Data { get { return null; } }
+		public string Color { get { return null; } }
 	}
 }
